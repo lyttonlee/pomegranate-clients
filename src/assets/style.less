@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+@normal: rgb(54, 45, 36);
+@primary: rgb(21, 157, 167);
+input {
+  border: none;
+  background: none;
+  border-radius: 0;
+  font-size: 1.1rem;
+  color: #fcfcfc;
+  text-indent: .5rem;
+  border-bottom: 1.5px solid @normal;
+  caret-color: @primary;
+  &:focus {
+    border-bottom: 1.5px solid @primary;
+    outline: none;
+  }
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: .5px solid @normal;
+}
+.page {
+  background: rgba(255, 255, 255, 0);
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
