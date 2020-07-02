@@ -2,7 +2,7 @@
   <div class="page">
     <button @click="toAdd" class="btn">添加</button>
     <template v-for="(item, index) in list">
-      <div :key="index">
+      <div @click="toDeatil(item._id)" class="item" :key="index">
         <div class="title">{{item.title}}</div>
         <div v-html="item.content"></div>
       </div>
@@ -38,6 +38,9 @@ export default {
     },
     toAdd () {
       this.$router.push('/create')
+    },
+    toDeatil (id) {
+      this.$router.push(`/detail/${id}`)
     }
   },
   created () {
