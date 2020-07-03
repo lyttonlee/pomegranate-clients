@@ -1,7 +1,10 @@
 <template>
   <div class="page">
-    <h2>detail</h2>
-    <!-- <div>{{$router}}</div> -->
+    <div class="title">
+      {{article.title}}
+    </div>
+    <div v-html="article.content" class="content"></div>
+    <div class="total"></div>
   </div>
 </template>
 <script>
