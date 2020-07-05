@@ -70,7 +70,7 @@ export default {
       box-sizing: border-box;
     }
     .title {
-      background: rgb(116, 9, 9);
+      background: #bd0b0b;
       color: aliceblue;
       padding: 8px 0;
       font-size: 1.3rem;
