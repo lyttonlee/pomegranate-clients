@@ -58,8 +58,13 @@ export default {
     makeQR () {
       // console.log(window.location)
       const href = window.location.href
+      const opts = {
+        type: 'image/png',
+        width: 150,
+        margin: 5,
+      }
       this.list.forEach((item) => {
-        QR.toDataURL(href + item._id).then((url) => {
+        QR.toDataURL(href + item._id, opts).then((url) => {
           let a = document.createElement('a')
           a.href = url
           a.download = item.title
