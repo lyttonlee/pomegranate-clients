@@ -61,10 +61,12 @@ export default {
       const opts = {
         type: 'image/png',
         width: 150,
-        margin: 5,
+        margin: 5
       }
       this.list.forEach((item) => {
-        QR.toDataURL(href + item._id, opts).then((url) => {
+        const url = href + 'detail/' + item._id
+        console.log(url)
+        QR.toDataURL(url, opts).then((url) => {
           let a = document.createElement('a')
           a.href = url
           a.download = item.title

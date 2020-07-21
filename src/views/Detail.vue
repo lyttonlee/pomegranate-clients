@@ -49,7 +49,7 @@ export default {
       getItem(id).then((res) => {
         const { code, result } = res
         if (code === 0) {
-          console.log(result)
+          // console.log(result)
           this.article = result
         }
       })

@@ -30,7 +30,7 @@ export default {
         content: this.info
       }
       addItem(param).then((res) => {
-        console.log(res)
+        // console.log(res)
         const { code } = res
         if (code === 0) {
           this.$router.push('/')
