@@ -89,7 +89,10 @@ export default {
         this.$emit('change', this.info_) // 将内容同步到父组件中
       }
       // 创建富文本编辑器
+      // this.editor.customConfig.qiniu = true
       this.editor.create()
+      // console.log(window.Qiniu)
+      // console.log(Qiniu)
     }
   },
   beforeDsetroy () {

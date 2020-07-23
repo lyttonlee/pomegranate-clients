@@ -65,7 +65,7 @@ export default {
       }
       this.list.forEach((item) => {
         const url = href + 'detail/' + item._id
-        console.log(url)
+        // console.log(url)
         QR.toDataURL(url, opts).then((url) => {
           let a = document.createElement('a')
           a.href = url

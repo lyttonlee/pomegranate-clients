@@ -2,32 +2,40 @@
   <div class="page">
     <h2>create</h2>
     <input v-model="title" type="text" placeholder="title">
-    <Editor v-model="info" />
+    <!-- <Editor v-model="info" /> -->
+    <Upload v-model="info" />
     <button @click="submit">Add Pomegrannate</button>
   </div>
 </template>
 
 <script>
-import Editor from '../components/Editor'
+// import Editor from '../components/Editor'
+import Upload from '../components/Uploads'
 import { addItem } from '../api/api'
 export default {
   components: {
-    Editor
+    // Editor,
+    Upload
   },
   data () {
     return {
-      info: '',
+      info: {},
       title: ''
     }
   },
   methods: {
     submit () {
+      console.log(this.info)
       if (!this.title || !this.info) {
         return
       }
+      const content = Object.values(this.info).map((val) => {
+        return `<img src="${val}" style="width:100%" >`
+      }).join('')
+      console.log(content)
       const param = {
         title: this.title,
-        content: this.info
+        content
       }
       addItem(param).then((res) => {
         // console.log(res)

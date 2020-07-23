@@ -27,3 +27,7 @@ export const updateItem = (id, content) => {
 export const deleteItem = (id) => {
   return request.delete(`/article/${id}`)
 }
+
+export const getUploadToken = () => {
+  return request.get('/upload/token')
+}
