@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <h2>create</h2>
-    <input type="text" v-model="_id" placeholder="_id">
+    <input type="text" v-model="id" placeholder="_id">
     <input v-model="title" type="text" placeholder="title">
     <!-- <Editor v-model="info" /> -->
     <Upload v-model="info" />
@@ -22,7 +22,7 @@ export default {
     return {
       info: {},
       title: '',
-      _id: '',
+      id: ''
     }
   },
   methods: {
@@ -38,7 +38,7 @@ export default {
       const param = {
         title: this.title,
         content,
-        _id: this._id
+        _id: this.id
       }
       addItem(param).then((res) => {
         // console.log(res)

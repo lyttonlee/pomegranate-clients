@@ -6,7 +6,7 @@ module.exports = {
       new CompressPlugin({
         test: /\.(js|css|html|svg)$/
       })
-    ],
+    ]
   },
   devServer: {
     port: 9002,
